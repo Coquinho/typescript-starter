@@ -4,7 +4,7 @@
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
-  
+
   <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
@@ -23,6 +23,11 @@
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
+
+Here i'm mainly following [wanago.io](https://wanago.io/2020/05/11/nestjs-api-controllers-routing-module/)
+tutorial.
+Every part completed has its tag as `part-XX` on its last commit.
+Original code from the tutorial can be found at [wanago's github](https://github.com/mwanago/nestjs-typescript)
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
