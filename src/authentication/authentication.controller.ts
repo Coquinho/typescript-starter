@@ -1,6 +1,7 @@
 import {
   Body,
   Post,
+  Get,
   Req,
   Res,
   Controller,
@@ -43,5 +44,13 @@ export class AuthenticationController {
       this.authenticationService.getCookieForLogOut(),
     );
     return response.sendStatus(200);
+  }
+
+  @UseGuards(JwtAuthenticationGuard)
+  @Get()
+  authenticate(@Req() request: RequestWithUser) {
+    const user = request.user;
+    user.password = undefined;
+    return user;
   }
 }
