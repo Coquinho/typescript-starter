@@ -23,6 +23,14 @@ export class UsersService {
     );
   }
 
+  async getById(id: number) {
+    const user = await this.usersRepository.findOne({ id });
+    if (user) {
+      return user;
+    }
+    throw new HttpException('There is no such user', HttpStatus.NOT_FOUND);
+  }
+
   async create(userData: CreateUserDto) {
     const newUser = await this.usersRepository.create(userData);
     await this.usersRepository.save(newUser);
