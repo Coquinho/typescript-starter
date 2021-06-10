@@ -5,6 +5,7 @@ import * as Joi from '@hapi/joi';
 import { PostsModule } from './posts/posts.module';
 import { DatabaseModule } from './database/database.module';
 import { CatsController } from './cats/cats.controller';
+import { CatsService } from './cats/cats.service';
 
 @Module({
   imports: [
@@ -22,6 +23,6 @@ import { CatsController } from './cats/cats.controller';
     DatabaseModule,
   ],
   controllers: [CatsController],
-  providers: [],
+  providers: [CatsService],
 })
 export class AppModule {}
